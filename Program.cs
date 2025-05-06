@@ -4,15 +4,25 @@
     {
         static void Main(string[] args)
         {
-            int a = 10;
-            int b = 20;
-            Sum(a, b);
-            Console.WriteLine(Sum(a, b));
+            Console.WriteLine("Enter a number: ");
+            int target = int.Parse(Console.ReadLine());
         }
 
-        public static int Sum(int x, int y)
+        public static int Sum(int target)
         {
-            return x + y;
+            int sum = 0;
+
+            while (target > 0)
+            {
+                sum = sum + target % 10;
+                target = target / 10;
+            }
+
+
+            return sum;
+            Console.WriteLine(sum);
         }
+
+
     }
 }
